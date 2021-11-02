@@ -21,10 +21,10 @@
                     @csrf
                     <div class="row">
                         <div class="col form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Entrez votre noms" required>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Entrez votre nom et prénom" required>
                         </div>
                         <div class="col form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Entrez vrotre addresse email" required>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Entrez votre adresse mail" required>
                         </div>
                     </div>
                     <div class="form-group col-12">
