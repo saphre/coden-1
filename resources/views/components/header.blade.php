@@ -25,21 +25,21 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link  active" href="{{ route('home') }}">Acceuil</a></li>
-                <li><a class="nav-link " href="{{ route('about') }}">A propos</a></li>
-                <li><a class="nav-link " href="{{ route('activities') }}">Activités</a></li>
-                <li><a class="nav-link  " href="{{ route('realizations') }}">Réalisations</a></li>
-                <li><a class="nav-link " href="{{ route('sites') }}">Sites Touristiques</a></li>
-                <li class="dropdown"><a href="#"><span>Sites Touristiques</span> <i class="bi bi-chevron-down"></i></a>
+                <li><a class="nav-link  {{ Route::currentRouteName() == 'home' ? 'active' :''}}" href="{{ route('home') }}">Accueil</a></li>
+                <li><a class="nav-link {{ Route::currentRouteName() == 'about' ? 'active' :''}} " href="{{ route('about') }}">A propos</a></li>
+                <li><a class="nav-link {{ Route::currentRouteName() == 'activities' ? 'active' :''}}" href="{{ route('activities') }}">Activités</a></li>
+                <li><a class="nav-link {{ Route::currentRouteName() == 'realisations' ? 'active' :''}} " href="{{ route('realisations') }}">Réalisations</a></li>
+                <li class="dropdown">
+                    <a href="{{ route('sites') }}" class="{{ Route::currentRouteName() == 'sites' ? 'active' :''}} ">
+                        <span>Sites Touristiques</span> <i class="bi bi-chevron-down"></i>
+                    </a>
                     <ul>
-                        <li><a href="#">Sites Touristiques 1</a></li>
-                        <li><a href="#">Sites Touristiques 2</a></li>
-                        <li><a href="#">Sites Touristiques 3</a></li>
-                        <li><a href="#">Sites Touristiques 4</a></li>
+                        <li><a href="#">Centre Culturel de Ndjola</a></li>
+                        <li><a href="#">Musée de Ndjola</a></li>
                     </ul>
                 </li>
-                <li><a class="nav-link " href="{{ route('news') }}">Actualités</a></li>
-                <li><a class="nav-link " href="{{ route('contactus') }}">Contact</a></li>
+                <li><a class="nav-link {{ Route::currentRouteName() == 'news' ? 'active' :''}}" href="{{ route('news') }}">Actualités</a></li>
+                <li><a class="nav-link {{ Route::currentRouteName() == 'contactus' ? 'active' :''}}" href="{{ route('contactus') }}">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>

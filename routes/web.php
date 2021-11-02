@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsletterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +22,13 @@ Route::get('/apropos', function () {
     return view('about');
 })->name('about');
 
-Route::get('/activitees', function () {
+Route::get('/activites', function () {
     return view('activities');
 })->name('activities');
 
 Route::get('/realisations', function () {
-    return view('realizations');
-})->name('realizations');
+    return view('realisations');
+})->name('realisations');
 
 Route::get('/sites-touristiques', function () {
     return view('sites');
@@ -40,3 +41,16 @@ Route::get('/actualites', function () {
 Route::get('/contactez-nous', function () {
     return view('contactus');
 })->name('contactus');
+
+Route::post('/create/newsletter',// [NewsletterController::class, "create"]
+function ()
+{
+    return "lol";
+}
+)->name('create_newsletter');
+Route::post('/create/contactus',// [ContactUsController::class, "create"]
+function ()
+{
+    return "contact us process :    ) ";
+}
+)->name('create_contactus');

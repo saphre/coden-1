@@ -11,8 +11,10 @@ class NewsletterController extends Controller
      * @KadonWills
      * saves email address in newsletter table
      */
-    public function create(Request $request)
+    public  function add(Request $request)
     {
+        dd($request->email);
         Newsletter::create($request->get('email'));
+
     }
 }

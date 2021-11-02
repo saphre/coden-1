@@ -6,13 +6,16 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
 
-    <title>CODEN | Commité de Développement Durables de Njola - @yield("title")</title>
+    <title>CODEN | Commité de Développement Durables de Ndjola - @yield("title")</title>
     <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta content="coden, ndjola, cameroon culture, cameroun nord, communauté ndjola, siteweb ndjola, adherer à coden, communauté de developpement durables de ndjola, developpement durable, communauté de ndjola" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ asset('/site.webmanifest')}}">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">

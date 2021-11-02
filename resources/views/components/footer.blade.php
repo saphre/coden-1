@@ -7,8 +7,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <h4>Rejoignez notre newsletter</h4>
-                        <p>Inscrivez vous pour recoir toutes les informations sur notre actualités</p>
-                        <form action="" method="post">
+                        <p>Inscrivez vous pour recevoir toutes les informations sur notre actualités</p>
+                        <form action="{{ route('create_newsletter') }}" method="post">
                             <input type="email" name="email"><input type="submit" value="S'inscrire">
                         </form>
                     </div>
@@ -20,19 +20,27 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>CODEN<span>.</span></h3>
+                    <div class="col-lg-3 footer-contact">
                         <p>
+        <a href="{{ route('home') }}" class="logo"><img src="{{asset('assets/img/logo.jpg')}}" alt="CODEN Logo" width="200"></a>
+
+
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <p>
+                        <h3>CODEN<span>.</span></h3>
+
                             Cameroun , Nord - <b>Ndjola</b><br><br>
                             <strong>Phone:</strong> (+237) 699 99 99 99<br>
                             <strong>Email:</strong> info@coden.com<br>
                         </p>
                     </div>
 
-                    <div class="col-lg-5 col-md-6 footer-links ">
+                    <div class="col-lg-2 col-md-6 footer-links ">
                         <h4>Autres Liens.</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Acceuil</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Accueil</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">A propos</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Actualitées</a></li>
                             {{-- <li><i class="bx bx-chevron-right"></i> <a href="#">Nos activitées</a></li>
