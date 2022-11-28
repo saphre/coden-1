@@ -1,4 +1,4 @@
-FROM php:8.1.9-fpm-alpine3.16
+FROM php:8.1.12-fpm-alpine3.16
 
 LABEL maintainer="Ric Harvey <ric@squarecows.com>"
 
@@ -6,8 +6,8 @@ ENV php_conf /usr/local/etc/php-fpm.conf
 ENV fpm_conf /usr/local/etc/php-fpm.d/www.conf
 ENV php_vars /usr/local/etc/php/conf.d/docker-vars.ini
 
-ENV NGINX_VERSION 1.21.6
-ENV LUA_MODULE_VERSION 0.10.19
+ENV NGINX_VERSION 1.22.1
+ENV LUA_MODULE_VERSION 0.10.22
 ENV DEVEL_KIT_MODULE_VERSION 0.3.1
 ENV LUAJIT_LIB=/usr/lib
 ENV LUAJIT_INC=/usr/include/luajit-2.1
@@ -262,7 +262,6 @@ RUN echo "cgi.fix_pathinfo=0" > ${php_vars} &&\
         -e "s/;listen.owner = www-data/listen.owner = nginx/g" \
         -e "s/;listen.group = www-data/listen.group = nginx/g" \
         -e "s/listen = 127.0.0.1:9000/listen = \/var\/run\/php-fpm.sock/g" \
-        -e "s/listen = 127.0.0.1:8000/listen = \/var\/run\/php-fpm.sock/g" \
         -e "s/^;clear_env = no$/clear_env = no/" \
         ${fpm_conf}
 #    ln -s /etc/php7/php.ini /etc/php7/conf.d/php.ini && \
@@ -286,7 +285,7 @@ ADD src/ /var/www/html/
 ADD errors/ /var/www/errors
 
 
-EXPOSE 443 80 8000
+EXPOSE 443 80
 
 WORKDIR "/var/www/html"
-CMD ["/start.sh","php artisan serve --host 0.0.0.0"]
+CMD ["/start.sh"]
