@@ -289,4 +289,4 @@ ADD errors/ /var/www/errors
 EXPOSE 443 80 8000
 
 WORKDIR "/var/www/html"
-CMD ["/start.sh"]
+CMD ["/start.sh","php artisan serve --host 0.0.0.0"]
