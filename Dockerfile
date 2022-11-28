@@ -285,7 +285,7 @@ ADD src/ /var/www/html/
 ADD errors/ /var/www/errors
 
 
-EXPOSE 443 80
+EXPOSE 443 80 8000
 
 WORKDIR "/var/www/html"
 CMD ["/start.sh"]
